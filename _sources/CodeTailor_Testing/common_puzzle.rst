@@ -4,7 +4,7 @@
 
 Provide a Common-Solution-based Adaptive Puzzle 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This type provides a common solution-based adaptive puzzle to all students. 
+This type provides a common solution (example solution)-based adaptive puzzle to all students. 
 
 No distractor blocks are provided. The students can interact with the puzzle and try to solve it.
 

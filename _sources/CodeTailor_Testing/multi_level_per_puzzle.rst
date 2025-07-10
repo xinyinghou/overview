@@ -2,8 +2,8 @@
 🪄 CodeTailor Examples - Try the "Get Help" button
 ===================================================
 
-Provide a Block-and-Solution Personalized Adaptive Puzzle with a common solution-based one as the safeguard
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Provide a Block-and-Solution Personalized Adaptive Puzzle with a common solution (example solution)-based one as the safeguard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This type provides a **block-and-solution personalized adaptive puzzle** based on students' current written code.
 
