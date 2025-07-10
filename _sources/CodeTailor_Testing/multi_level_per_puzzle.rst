@@ -83,7 +83,7 @@ What to do next
 
 .. raw:: html
 
-    <p>Click on the following link to try: <b><a id="execut_multi_level_per_puzzle"> <font size="+1">A Block-and-Solution Personalized Adaptive Puzzle with Execution_Based Feedback</font></a></b></p>
+    <p>Click on the following link to try: <b><a id="noindent_noadapt_multi_level_per_puzzle"> <font size="+1">A No-indent Non-adaptive Personalized Puzzle</font></a></b></p>
 
 .. raw:: html
 
@@ -91,8 +91,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("execut_multi_level_per_puzzle")
-        a.href = "execut_multi_level_per_puzzle.html"
+        a = document.getElementById("noindent_noadapt_multi_level_per_puzzle")
+        a.href = "noindent_noadapt_multi_level_per_puzzle.html"
       };
 
     </script>
