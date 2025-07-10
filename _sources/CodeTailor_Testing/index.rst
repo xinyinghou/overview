@@ -60,7 +60,7 @@ What to do next
 
 .. raw:: html
 
-    <p>Click on the following link to try: <b><a id="common_puzzle"> <font size="+1">a common solution (example solution)-based adaptive puzzle</font></a></b></p>
+    <p>Click on the following link to try: <b><a id="common_puzzle"> <font size="+1">A Common Solution (Example Solution)-Based Adaptive Puzzle</font></a></b></p>
 
 .. raw:: html
 
