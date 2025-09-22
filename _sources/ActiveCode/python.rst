@@ -223,9 +223,9 @@ Image Processing
 
 We have a special image library that we wrote for skulpt that lets you access images pixel by pixel.  This is a great way to practice nested iteration and to learn about the many different filters provided by services like Instagram, and others.
 
-.. datafile:: golden_gate.png
-    :image:
-    :fromfile: golden_gate.png
+.. .. datafile:: golden_gate.png
+..     :image:
+..     :fromfile: golden_gate.png
 
 
 Click on the reveal to see the rst for the datafile directive.
@@ -237,9 +237,9 @@ Click on the reveal to see the rst for the datafile directive.
 
    .. code-block:: rst
 
-      .. datafile:: golden_gate.png
-         :image:
-         :fromfile: golden_gate.png
+      .. .. datafile:: golden_gate.png
+      ..    :image:
+      ..    :fromfile: golden_gate.png
 
 You can use images in many ways.  If you have an image in your page and it has an id tag you can use that.  If you have a full URL to an image you can use that.  But the best thing to do if you are writing a book is to use the ``.. datafile::`` directive, this ensures that the image is available from anywhere in the book.
 
@@ -484,12 +484,9 @@ If the JOBE server has pandas installed we can even use pandas right in the text
 
 Here is the file it will read from.
 
-.. datafile:: country_data.csv
-    :fromfile: world_countries.csv
 
 .. activecode:: pandas
    :language: python3
-   :datafile: country_data.csv
 
    import pandas as pd
 
@@ -505,7 +502,6 @@ Here is the file it will read from.
 
       .. activecode:: pandas
          :language: python3
-         :datafile: country_data.csv
 
          import pandas as pd
 
@@ -516,18 +512,18 @@ Here is the file it will read from.
 For this example, we move our ``PartyAnimal`` class into its own file.
 Then, we can 'import' the ``PartyAnimal`` class in a new file and extend it, as follows:
 
-.. datafile:: src/builtin/party.py
+.. .. datafile:: src/builtin/party.py
 
-   class PartyAnimal:
+..    class PartyAnimal:
 
-         def __init__(self, nam):
-            self.name = nam
-            print(self.name,'constructed')
+..          def __init__(self, nam):
+..             self.name = nam
+..             print(self.name,'constructed')
 
-         def party(self, x) :
-            self.x = x
-            self.x = self.x + 1
-            print(self.name,'party count',self.x)
+..          def party(self, x) :
+..             self.x = x
+..             self.x = self.x + 1
+..             print(self.name,'party count',self.x)
 
 
 .. activecode:: inherit_cricketfan

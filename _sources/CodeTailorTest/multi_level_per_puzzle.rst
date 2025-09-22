@@ -1,15 +1,10 @@
 
-🪄 CodeTailor Examples - Try the "Get Help" button
-===================================================
-
 Provide a Block-and-Solution Personalized Adaptive Puzzle
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
-This provides a **block-and-solution personalized adaptive puzzle** based on students' current written code.
-
-The students can interact with the puzzle and try to solve it.
-
-The students can regenerate the puzzle based on their updated code anytime by clicking the "Regenerate Help" button.
+In this example, you receive a **block-and-solution personalized adaptive puzzle** based on your current written code.
+You can interact with the puzzle and try to solve it.
+You can regenerate the puzzle based on your updated code anytime by clicking the "Regenerate Help" button.
 
 :Movable Blocks:
     Move the correct blocks from the left box to the right box and put them into the correct order.
@@ -75,22 +70,60 @@ The students can regenerate the puzzle based on their updated code anytime by cl
     myTests().main()
 
 
+.. reveal:: codetailor2_source
+   :showtitle: Show Source
+   :hidetitle: Hide Source
+   :modaltitle: Source for the example above
 
-What to do next
-^^^^^^^^^^^^^^^
+   .. code-block:: rst
+    
+        .. activecode::  str-mixed-example-multiper
+            :autograde: unittest
+            :nocodelens:
+            :parsonspersonalize: partial
 
-.. raw:: html
 
-    <p>Click on the following link to try: <b><a id="java_solution_per_puzzle"> <font size="+1">A Java Solution-only Personalized Adaptive Puzzle</font></a></b></p>
+            Finish a function, ``phrase(person, thing)``:
+                - It has ``person`` and ``thing`` as input.
+                - First verify whether ``person`` and ``thing`` are strings. If not, return ``False``.
+                - If ``person`` and ``thing`` are two strings, return one string with the characters in ``person``, followed by an empty space, and then followed by ``thing``
+                - Make sure the first letter in ``person`` is capitalized and all the characters in ``thing`` are lowercase.
+            
+                .. table::
+                    :name: phrase_table_multiper
+                    :align: left
+                    :width: 50
 
-.. raw:: html
+                    +-------------------------------------+---------------------------------------+
+                    | Example Input                       | Expected Output                       |
+                    +=====================================+=======================================+
+                    |``phrase("Sam", "Likes to code")``   | ``"Sam likes to code"``               |
+                    +-------------------------------------+---------------------------------------+
+                    |``phrase("ANN", "Likes to CODE")``   | ``"Ann likes to code"``               |
+                    +-------------------------------------+---------------------------------------+
+                    |``phrase(1, "Python")``              | ``False``                             |
+                    +-------------------------------------+---------------------------------------+
 
-    <script type="text/javascript" >
+            ~~~~
+            # Here is a student's buggy code
+            # click the "Get Help" button above to see what it provides.
 
-      window.onload = function() {
+            def phrase(person, thing): 
+                if type(person) == str and type(thing) == str: 
+                person = person.capitalize # bug 2
+                thing = thing.lower()
+                return person + " " + thing
+                # more bugs ...
 
-        a = document.getElementById("java_solution_per_puzzle")
-        a.href = "java_solution_per_puzzle.html"
-      };
 
-    </script>
+
+            ====
+            from unittest.gui import TestCaseGui
+
+            class myTests(TestCaseGui):
+                def testOne(self):
+                    self.assertEqual(phrase("sam", "Likes to code"), "Sam likes to code", 'phrase("sam", " Likes to code")')
+                    self.assertEqual(phrase("mary-anne", "likes to sing"), "Mary-anne likes to sing", 'phrase("mary-anne", " likes to sing")')
+                    self.assertEqual(phrase("ANNA", "likes to dance"), "Anna likes to dance", 'phrase("ANNA", " likes to dance")')
+                    self.assertEqual(phrase(1111, "likes programming"), False, 'phrase(1111, " likes programming")')
+            myTests().main()
